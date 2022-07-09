@@ -10,7 +10,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import ChartTooltip from "./ChartTooltip";
-import { getBenchmarkTitle } from "../../../src/utils/utils";
+import { getBenchmarkTitle, numberWithCommas } from "../../../src/utils/utils";
 import moment from "moment";
 
 const useStyles = createUseStyles({
@@ -104,6 +104,7 @@ const Chart = ({ currency, period, benchmark }: Props) => {
               stroke="#fff"
               axisLine={{ stroke: "none" }}
               tickMargin={30}
+              tickFormatter={(num) => numberWithCommas(num)}
             />
             <Tooltip
               content={

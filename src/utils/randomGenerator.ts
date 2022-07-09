@@ -11,21 +11,22 @@ export const randomDataGenerate = (
   let randomValuesData1: number[] = [];
   const dates = getDates(period);
 
-  let lastNumber = startingValue;
+  let currentValue = startingValue;
   for (let i = 0; i < dates.length; i++) {
     const randomNumber = Math.floor(Math.random() * 100000);
     if (i % 2) {
-      lastNumber = lastNumber + randomNumber + 20000;
+      currentValue = currentValue + randomNumber + 20000;
     } else {
-      lastNumber = lastNumber - randomNumber - 4000;
+      currentValue = currentValue - randomNumber - 10000;
     }
-    randomValuesData1.push(lastNumber);
+    if (currentValue < 0) currentValue = 0;
+    randomValuesData1.push(currentValue);
   }
 
   const randomValuesData2: number[] = randomValuesData1.map((val) => {
     const randomNumber = Math.floor(Math.random() * 100000);
     const value = val - randomNumber;
-    return value < 0 ? 0 : value;
+    return value < 0 ? val : value;
   });
 
   let data: any[] = [];
