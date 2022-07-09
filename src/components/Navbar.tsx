@@ -4,9 +4,9 @@ import { useTheme } from "@emotion/react";
 import { Container } from "@mui/material";
 import { useRouter } from "next/router";
 import { createUseStyles } from "react-jss";
-import Image from "next/image";
 import saLogo from "../../public/static/images/sa-logo-light.svg";
 import ImageWrapper from "./ImageWrapper";
+import ExpandButton from "./buttons/ExpandButton";
 
 const useStyles = createUseStyles({
   nav: {
@@ -93,6 +93,7 @@ const Navbar = () => {
                 </span>
               </Link>
             ))}
+            <ExpandButton title="Oliver" />
           </div>
         </div>
       </Container>

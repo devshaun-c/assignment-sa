@@ -45,7 +45,7 @@ const PortfolioComparison = () => {
   const classes = useStyles();
   const [tab, setTab] = useState(tabs[0].value);
   const [period, setPeriod] = useState(periodFilterOptions[0].value);
-  const [benchmark, setBenchmark] = useState(BENCHMARK_OPTIONS.bm4060);
+  const [benchmark, setBenchmark] = useState("");
   const [currency, setCurrency] = useState(currencyFilterOptions[0].value);
 
   return (

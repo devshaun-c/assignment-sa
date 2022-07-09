@@ -1,4 +1,5 @@
 import moment from "moment";
+import { BENCHMARK_OPTIONS } from "../constants/constants";
 
 export function numberWithCommas(num: number) {
   return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -6,13 +7,11 @@ export function numberWithCommas(num: number) {
 
 export function getBenchmarkTitle(benchmark: string) {
   switch (benchmark) {
-    case "60/40":
-      return "40% VTSMX (Stock) + 60% VBMFX (Bond)";
-      break;
+    case BENCHMARK_OPTIONS.bm2080:
+      return "20% VTSMX (Stock) + 80% VBMFX (Bond)";
 
     default:
-      return "20% VTSMX (Stock) + 80% VBMFX (Bond)";
-      break;
+      return "40% VTSMX (Stock) + 60% VBMFX (Bond)";
   }
 }
 

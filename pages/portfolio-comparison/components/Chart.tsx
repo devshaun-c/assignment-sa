@@ -11,6 +11,7 @@ import {
 } from "recharts";
 import ChartTooltip from "./ChartTooltip";
 import { getBenchmarkTitle } from "../../../src/utils/utils";
+import moment from "moment";
 
 const useStyles = createUseStyles({
   lineChart: {
@@ -56,7 +57,7 @@ const useStyles = createUseStyles({
 const Chart = ({ currency, period, benchmark }: Props) => {
   const [data, setData] = useState([]);
 
-  // Fetch chart data from API
+  // Fetch chart data from API. Can be updated to use async/await
   useEffect(() => {
     fetch("/api/data", {
       body: JSON.stringify({ currency, period, benchmark }),
@@ -79,8 +80,8 @@ const Chart = ({ currency, period, benchmark }: Props) => {
           Portfolio value based on gross returns
         </div>
         <div className="fs-sm mt-1">
-          Gross returns and exchange rates sourced from Bloomberg as of 9th July
-          2022
+          Gross returns and exchange rates sourced from Bloomberg as of{" "}
+          <u>{moment().format("Do MMM YYYY")}</u>
         </div>
       </div>
       <div className={classes.chart}>
