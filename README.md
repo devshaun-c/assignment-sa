@@ -1,7 +1,11 @@
-## NOTES
+## NOTES TO REVIEWERS
 
 - Benchmark defaults to 40/60 when no benchmark selected. Can be updated based on requirements.
 - Data is randomly generated and changes on every filter click due to new parameters. This is intended.
+
+# HEROKU
+
+https://assignment-sa.herokuapp.com/portfolio-comparison
 
 # Packages used
 
@@ -34,11 +38,11 @@
 - PageTab
 - BasicSelect
 - PreviousButton
+- ExpandButton
 
 # Sections
 
 - PortfolioComparison
   - BenchmarkSelection
-  - FilterBar
-  - LineChart
-  - ComparisonDialog
+  - Chart
+  - ChartTooltip
