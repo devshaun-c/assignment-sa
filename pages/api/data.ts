@@ -12,7 +12,7 @@ export default function handler(
   let usedBenchmark = BENCHMARK_OPTIONS.bm4060;
   if (benchmark) usedBenchmark = benchmark;
 
-  console.log(req.body);
+  // console.log(req.body);
   //NOTE:
   //Get some random data based on period, benchmark and currency.
   //In a real scenario, this would be pulling from actual data source with the following query params.

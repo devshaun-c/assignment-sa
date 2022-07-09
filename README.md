@@ -9,10 +9,12 @@ https://assignment-sa.herokuapp.com/portfolio-comparison
 
 # Packages used
 
-- NextJS
+- NextJS typescript
 - MUI
 - @mui/icons-material
 - recharts
+- moment
+- react-jss
 
 # Styling
 
