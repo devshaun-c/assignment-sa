@@ -50,7 +50,7 @@ const useStyles = createUseStyles({
 const benchmarkOptions = [
   {
     value: BENCHMARK_OPTIONS.bm4060,
-    label: "60/40 portfolio",
+    label: "40/60 portfolio",
   },
   {
     value: BENCHMARK_OPTIONS.bm2080,
