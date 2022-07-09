@@ -9,11 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@mui/icons-material": "^5.8.4",
+    "@mui/material": "^5.8.7",
+    "chart.js": "^3.8.0",
+    "moment": "^2.29.4",
     "next": "12.2.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-chartjs-2": "^4.2.0",
+    "react-dom": "18.2.0",
+    "react-jss": "^10.9.0",
+    "recharts": "^2.1.12"
   },
   "devDependencies": {
+    "@faker-js/faker": "^7.3.0",
     "@types/node": "18.0.3",
     "@types/react": "18.0.15",
     "@types/react-dom": "18.0.6",
